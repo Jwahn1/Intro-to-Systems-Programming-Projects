@@ -1,0 +1,95 @@
+PART A:
+Briefly dexcribe how you measure the runtime of the strlen() functions.
+Be sure to include:
+- The size of the input data
+- The number of repetitions performed
+- A brief description of what your program does
+
+Explanation:
+Our input data is roughly 30000+ characters which is then sent to each of the three functions. We get the measurements by doing 10 loops to get the average 
+and a second inner loop where we get the length of the string 10 000 times
+
+for(int i = 0 ; i<10 ; i++){
+	clock begin
+	for(int j = 0; j<10000; j++){
+		//strlen here
+	}	
+	clock end
+	average += clock value
+}
+average = average/10
+//print the time it took on average to get strlen 10 000
+we then repeat this for the other three strlen functions
+========================================================================
+PART B:
+
+Enter 10 measurements for each of the three functions.
+strlen_byte():
+1: 0.150900 seconds
+2: 0.151200 second
+3: 0.151000 seconds
+4: 0.150600 seconds
+5: 0.151000 seconds
+6: 0.151000 seconds
+7: 0.149500 seconds
+8: 0.147800 seconds
+9: 0.148900 seconds
+10: 0.148800 seconds
+--------
+Average: 0.15007
+
+strlen_word():
+1: 0.322600 seconds
+2: 0.321400 seconds
+3: 0.321900 seconds
+4: 0.322900 seconds
+5: 0.321400 seconds
+6: 0.323400 seconds
+7: 0.319800 seconds
+8: 0.319200 seconds
+9: 0.319400 seconds
+10: 0.318100 seconds
+--------
+Average: 0.32101
+
+strlen_std():
+1: 0.018800 seconds
+2: 0.018900 seconds
+3: 0.019000 seconds
+4: 0.018900 seconds
+5: 0.019000 seconds
+6: 0.019000 seconds
+7: 0.018800 seconds
+8: 0.018600 seconds
+9: 0.018600 seconds
+10: 0.018600 seconds
+--------
+Average: 0.01882
+
+
+========================================================================
+PART C:
+
+Compute the relative speed of each of the functions relative to the 
+fastest one.  So, the fastest function should have a relative speed
+of 1, and the other two will have relative speeds greater than 1.
+
+strlen_byte(): 7.9739
+
+strlen_word():17.0568
+
+strlen_std():1
+
+
+========================================================================
+PART D:
+
+Provide a hypothesis as to the differences between the relative performance 
+of strlen_byte() and strlen_word().
+
+Hypothesis:
+strlen_byte is the faster of the two thanks to its good use of locality as it travels the string pointer one by one there by guaranteeing a lot of chache hits 
+as it travels through it.
+On the other hand strlen_word loops until the variable word is equal to 0xFF meaning it doesnt take advantage of any space locality but forces a lot of loops to happen no matter 
+the size of the the inputted string.
+

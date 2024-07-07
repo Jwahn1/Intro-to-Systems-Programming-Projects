@@ -1,0 +1,97 @@
+# use the official gcc image, based on debian
+# can use verions as well, like gcc:5.2
+# see https://hub.docker.com/_/gcc/
+image: gcc
+
+build:
+  tags:
+    - ugrad
+  stage: build
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOBUILD/
+  script:
+    - cd inline
+    - if [ -f CMakeLists.txt ]; then cmake CMakeLists.txt; fi
+    - make
+  artifacts:
+    paths:
+      - inline/inline
+
+test00:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOBUILD/
+  script:
+    - cd inline
+    - ./tests/test.sh 00 . inline
+
+test01:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOBUILD/
+  script:
+    - cd inline
+    - ./tests/test.sh 01 . inline
+
+test02:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOBUILD/
+  script:
+    - cd inline
+    - ./tests/test.sh 02 . inline
+
+test_disasm00:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOBUILD/
+  script:
+    - cd disasm
+    - ./tests/test.sh mystery.txt 
+
+test_disasm01:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOBUILD/
+  script:
+    - cd disasm
+    - ./tests/test.sh enigma.txt 
+
+test_disasm02:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOBUILD/
+  script:
+    - cd disasm
+    - ./tests/test.sh riddle.txt 
+
+test_disasm03:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /NOBUILD/
+  script:
+    - cd disasm
+    - ./tests/test.sh puzzle.txt 
+

@@ -1,0 +1,300 @@
+# use the official gcc image, based on debian
+# can use verions as well, like gcc:5.2
+# see https://hub.docker.com/_/gcc/
+image: gcc
+
+build:
+  tags:
+    - ugrad
+  stage: build
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /release-2023-09-28/
+  script:
+    - cd marsdec1
+    - if [ -f CMakeLists.txt ]; then cmake CMakeLists.txt; fi
+    - make
+    - cd ..
+    - cd marsdecx
+    - if [ -f CMakeLists.txt ]; then cmake CMakeLists.txt; fi
+    - make
+  artifacts:
+    paths:
+      - marsdec1/marsdec1
+      - marsdecx/marsdecx
+
+test00:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /release-2023-09-28/
+  script:
+    - cd marsdec1
+    - ./tests/test.sh 00 . marsdec1
+
+test01:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /release-2023-09-28/
+  script:
+    - cd marsdec1
+    - ./tests/test.sh 01 . marsdec1
+
+test02:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /release-2023-09-28/
+  script:
+    - cd marsdec1
+    - ./tests/test.sh 02 . marsdec1
+
+test03:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /release-2023-09-28/
+  script:
+    - cd marsdec1
+    - ./tests/test.sh 03 . marsdec1
+
+test04:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /release-2023-09-28/
+  script:
+    - cd marsdec1
+    - ./tests/test.sh 04 . marsdec1
+
+test05:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /release-2023-09-28/
+  script:
+    - cd marsdec1
+    - ./tests/test.sh 05 . marsdec1
+
+test06:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /release-2023-09-28/
+  script:
+    - cd marsdec1
+    - ./tests/test.sh 06 . marsdec1
+
+test07:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /release-2023-09-28/
+  script:
+    - cd marsdec1
+    - ./tests/test.sh 07 . marsdec1
+
+test08:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /release-2023-09-28/
+  script:
+    - cd marsdec1
+    - ./tests/test.sh 08 . marsdec1
+
+test09:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /release-2023-09-28/
+  script:
+    - cd marsdec1
+    - ./tests/test.sh 09 . marsdec1
+
+test10:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /release-2023-09-28/
+  script:
+    - cd marsdecx
+    - ./tests/test.sh 00 . marsdecx
+
+test11:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /release-2023-09-28/
+  script:
+    - cd marsdecx
+    - ./tests/test.sh 01 . marsdecx
+
+test12:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /release-2023-09-28/
+  script:
+    - cd marsdecx
+    - ./tests/test.sh 02 . marsdecx
+
+test13:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /release-2023-09-28/
+  script:
+    - cd marsdecx
+    - ./tests/test.sh 03 . marsdecx
+
+test14:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /release-2023-09-28/
+  script:
+    - cd marsdecx
+    - ./tests/test.sh 04 . marsdecx
+
+test15:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /release-2023-09-28/
+  script:
+    - cd marsdecx
+    - ./tests/test.sh 05 . marsdecx
+
+test16:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /release-2023-09-28/
+  script:
+    - cd marsdecx
+    - ./tests/test.sh 06 . marsdecx
+
+test17:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /release-2023-09-28/
+  script:
+    - cd marsdecx
+    - ./tests/test.sh 07 . marsdecx
+
+test18:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /release-2023-09-28/
+  script:
+    - cd marsdecx
+    - ./tests/test.sh 08 . marsdecx
+
+test19:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /release-2023-09-28/
+  script:
+    - cd marsdecx
+    - ./tests/test.sh 09 . marsdecx
+
+test20:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /release-2023-09-28/
+  script:
+    - cd marsdecx
+    - ./tests/test.sh 10 . marsdecx
+
+test21:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /release-2023-09-28/
+  script:
+    - cd marsdecx
+    - ./tests/test.sh 11 . marsdecx
+
+test22:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /release-2023-09-28/
+  script:
+    - cd marsdecx
+    - ./tests/test.sh 12 . marsdecx
+
+test23:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /release-2023-09-28/
+  script:
+    - cd marsdecx
+    - ./tests/test.sh 13 . marsdecx
+
+test24:
+  tags:
+    - ugrad
+  stage: test
+  except:
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /release-2023-09-28/
+  script:
+    - cd marsdecx
+    - ./tests/test.sh 14 . marsdecx
+

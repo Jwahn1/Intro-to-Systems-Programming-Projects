@@ -1,0 +1,10 @@
+DIRECTORY . 3
+NAME Javier_Wahn
+DIRECTORY ./base 8
+DIRECTORY ./base/tests 12
+DIRECTORY ./work 13
+DIRECTORY ./work/tests 12
+PROGRAM revlin
+ERROR 11
+REVERSE test.2
+REVERSE test.4

@@ -1,0 +1,37 @@
+# use the official gcc image, based on debian
+# can use verions as well, like gcc:5.2
+# see https://hub.docker.com/_/gcc/
+image: gcc
+
+build:
+  tags:
+    - ugrad
+  stage: build
+  script:
+    - cd hello
+    - if [ -f CMakeLists.txt ]; then cmake CMakeLists.txt; fi
+    - make
+  artifacts:
+    paths:
+      - hello/hello
+
+test1:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - ./hello/tests/test1.sh
+
+test2:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - ./hello/tests/test2.sh
+
+test3:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - ./hello/tests/test3.sh

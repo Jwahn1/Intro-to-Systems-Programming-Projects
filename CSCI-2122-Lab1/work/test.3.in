@@ -1,0 +1,18 @@
+}
+    return 0;
+    }
+        printf("%s", lines[i]);
+    for (int i = n - 1; i >= 0; i--) {
+
+    }
+        n++
+        lines[n] = strdup(tmp);
+    while (fgets(tmp, 80, stdin) != NULL) {
+
+    char *lines[100];
+    char tmp[80];
+    int n = 0;
+int main() {
+
+#include <string.h>
+#include <stdio.h>

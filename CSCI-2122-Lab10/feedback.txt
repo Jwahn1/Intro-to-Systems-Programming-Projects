@@ -1,0 +1,71 @@
+GRADE: 8
+
+Total mark is out of 8
+
+Comments: Part A: 2/2
+
+Part B: 2/2
+
+Part C: 2/2
+
+Part D: 2/2
+
+
+Rubric:
+======
+
+Part A: (2 marks)
+  2/2 
+   - Program is implemented and explanation matches implementations
+  
+  1/2 
+   - Solid attempt at program implementation with an explanation.  OR
+   - Program is implemented but there is no (or very poor) explanation
+     of how it works.
+
+  0/2
+   - No attempt made.
+
+Part B: (2 marks)
+  2/2 
+   - Data is gathered.
+   - Data is within norms.
+     - strlen_std speed is about 9 (+/- 2) times faster than strlen_byte
+     - strlen_std speed is about 5 (+/- 2) times faster than strlen_word
+     - strlen_word speed is about 2 (+/- 0.5) times faster than strlen_byte
+  
+  1/2 
+   - Data is gathered.
+   - Data is varying widely from above norms.
+
+  0/2
+   - No attempt made.
+
+Part C: (2 marks)
+  2/2 
+   - Averages and ratios are computed 
+   - Results are within norms
+     - strlen_std speed is about 9 (+/- 2) times faster than strlen_byte
+     - strlen_std speed is about 5 (+/- 2) times faster than strlen_word
+     - strlen_word speed is about 2 (+/- 0.5) times faster than strlen_byte
+  
+  1/2 
+   - Averages and ratios are computed
+   - Results do not appear within norms.
+
+  0/2
+   - No attempt made.
+
+Part D: (2 marks)
+  2/2 
+   - Expanation is reasonable:  strlen_word() accesses 8 bytes at a time
+     so it performs fewers memory accesses and hence is faster.
+   - No explanation for why strlen_std() is even faster is needed, but
+     feel free to give bonus marks if a reasonable explanation provided.
+
+  1/2 
+   - Explanation is attempted
+
+  0/2
+   - No attempt made.
+

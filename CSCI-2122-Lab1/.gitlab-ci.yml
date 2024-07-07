@@ -1,0 +1,60 @@
+# use the official gcc image, based on debian
+# can use verions as well, like gcc:5.2
+# see https://hub.docker.com/_/gcc/
+image: gcc
+
+test01:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - ./base/tests/test.sh 01 
+
+test02:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - ./base/tests/test.sh 02 
+
+test03:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - ./base/tests/test.sh 03 
+
+test04:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - ./base/tests/test.sh 04 
+
+test05:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - ./base/tests/test.sh 05 
+
+test06:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - ./base/tests/test.sh 06 
+
+test07:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - ./base/tests/test.sh 07 
+
+test08:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - ./base/tests/test.sh 08 

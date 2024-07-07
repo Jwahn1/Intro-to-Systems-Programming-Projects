@@ -1,0 +1,97 @@
+# use the official gcc image, based on debian
+# can use verions as well, like gcc:5.2
+# see https://hub.docker.com/_/gcc/
+image: gcc
+
+build:
+  tags:
+    - ugrad
+  stage: build
+  script:
+    - cd spellbee
+    - if [ -f CMakeLists.txt ]; then cmake CMakeLists.txt; fi
+    - make
+  artifacts:
+    paths:
+      - spellbee/spellbee
+
+test00:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - cd spellbee
+    - ./tests/test.sh 00 . spellbee
+
+test01:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - cd spellbee
+    - ./tests/test.sh 01 . spellbee
+
+test02:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - cd spellbee
+    - ./tests/test.sh 02 . spellbee
+
+test03:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - cd spellbee
+    - ./tests/test.sh 03 . spellbee
+
+test04:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - cd spellbee
+    - ./tests/test.sh 04 . spellbee
+
+test05:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - cd spellbee
+    - ./tests/test.sh 05 . spellbee
+
+test06:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - cd spellbee
+    - ./tests/test.sh 06 . spellbee
+
+test07:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - cd spellbee
+    - ./tests/test.sh 07 . spellbee
+
+test08:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - cd spellbee
+    - ./tests/test.sh 08 . spellbee
+
+test09:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - cd spellbee
+    - ./tests/test.sh 09 . spellbee
+

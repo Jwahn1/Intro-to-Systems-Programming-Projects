@@ -1,0 +1,78 @@
+PART A:
+Briefly dexcribe how you measure the runtime of the strlen() functions.
+Be sure to include:
+- The size of the input data
+- The number of repetitions performed
+- A brief description of what your program does
+
+Explanation:
+
+
+========================================================================
+PART B:
+
+Enter 10 measurements for each of the three functions.
+strlen_byte():
+1:
+2:
+3:
+4:
+5:
+6:
+7:
+8:
+9:
+10:
+--------
+Average: 
+
+strlen_word():
+1:
+2:
+3:
+4:
+5:
+6:
+7:
+8:
+9:
+10:
+--------
+Average: 
+
+strlen_std():
+1:
+2:
+3:
+4:
+5:
+6:
+7:
+8:
+9:
+10:
+--------
+Average: 
+
+
+========================================================================
+PART C:
+
+Compute the relative speed of each of the functions relative to the 
+fastest one.  So, the fastest function should have a relative speed
+of 1, and the other two will have relative speeds greater than 1.
+
+strlen_byte(): 
+
+strlen_word():
+
+strlen_std():
+
+========================================================================
+PART D:
+
+Provide a hypothesis as to the differences between the relative performance 
+of strlen_byte() and strlen_word().
+
+Hypothesis:
+

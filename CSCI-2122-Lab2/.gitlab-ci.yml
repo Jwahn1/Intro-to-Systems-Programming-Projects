@@ -1,0 +1,148 @@
+# use the official gcc image, based on debian
+# can use verions as well, like gcc:5.2
+# see https://hub.docker.com/_/gcc/
+image: gcc
+
+build:
+  tags:
+    - ugrad
+  stage: build
+  script:
+    - cd problem1
+    - if [ -f CMakeLists.txt ]; then cmake CMakeLists.txt; fi
+    - make || true
+    - cd ..
+    - cd problem2
+    - if [ -f CMakeLists.txt ]; then cmake CMakeLists.txt; fi
+    - make || true
+    - cd ..
+    - cd problem3
+    - if [ -f CMakeLists.txt ]; then cmake CMakeLists.txt; fi
+    - make || true
+    - cd ..
+  artifacts:
+    paths:
+      - problem1/problem1
+      - problem2/problem2
+      - problem3/problem3
+
+test00:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - cd problem1
+    - ./tests/test.sh 00 . problem1
+
+test01:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - cd problem1
+    - ./tests/test.sh 01 . problem1
+
+test02:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - cd problem1
+    - ./tests/test.sh 02 . problem1
+
+test03:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - cd problem1
+    - ./tests/test.sh 03 . problem1
+
+test04:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - cd problem1
+    - ./tests/test.sh 04 . problem1
+
+test05:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - cd problem2
+    - ./tests/test.sh 05 . problem2
+
+test06:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - cd problem2
+    - ./tests/test.sh 06 . problem2
+
+test07:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - cd problem2
+    - ./tests/test.sh 07 . problem2
+
+test08:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - cd problem2
+    - ./tests/test.sh 08 . problem2
+
+test09:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - cd problem2
+    - ./tests/test.sh 09 . problem2
+
+test10:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - cd problem3
+    - ./tests/test.sh 10 . problem3
+
+test11:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - cd problem3
+    - ./tests/test.sh 11 . problem3
+
+test12:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - cd problem3
+    - ./tests/test.sh 12 . problem3
+
+test13:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - cd problem3
+    - ./tests/test.sh 13 . problem3
+
+test14:
+  tags:
+    - ugrad
+  stage: test
+  script:
+    - cd problem3
+    - ./tests/test.sh 14 . problem3
+

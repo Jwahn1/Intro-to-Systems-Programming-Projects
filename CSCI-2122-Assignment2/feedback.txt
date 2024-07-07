@@ -1,0 +1,83 @@
+GRADE:  26
+
+Assignment 2 Feedback:
+
+Total Grade:  26 / 50
+
+General Comments:
+
+
+Functionality:  8 / 20
+   Based on the tests form gitlab.
+
+Solution Quality:  8 / 20
+    See rubric below.
+
+Comments: code is almost wrong but I gave you 8 scores for attemting 
+
+
+Code Clarity:     10  / 10
+    See rubric below.
+
+Comments: 
+
+
+
+===========================================================
+RUBRICS
+
+Solution Quality
+----------------
+  (20/20) Excellent Solutions
+  - Problem 1 is complete
+  - Problem 2 is complete
+  - Algorithm and data structures are appropriate 
+     - marks may be deducted for very inefficient solutions
+
+  (16/20) Good Solution
+  - Problem 1 is complete
+  - Algorithm and data structures are appropriate 
+
+  (12/20) Marginal Solution
+  - Problem 1 is complete
+  - Solutions are functional but are not well thought out.
+
+  (8/20) Poor Solution
+  - Problem 1 mostly complete
+  - Problem 1 has major flaws
+
+  (4/20) Very Poor Solution
+  - Problem 1 attempted
+
+-----------------------------------------------------------
+Code Clarity
+-------------
+  (10/10) Professional looking code should be:
+  - well commented
+  - follows style guidelines
+  - consistent formatting
+  - is easy to read
+  - does not have any function definitions in header files 
+    (prototype declarations are ok)
+
+  (8/10) Code looks good if:
+  - follows style guidelines
+  - consistent formatting
+  - is easy to read
+  - does not have any function definitions in header files 
+
+  (6/10) Code is mostly readable if
+  - somewhat follows style guidelines
+  - mostly consistent formatting
+  - does not have any function definitions in header files 
+  - marker is having difficulty understanding your code
+
+  (4/10) Code is hard to read if
+  - follows a few of the guidelines
+  - somewhat consistent formatting
+  - has function definitions in header files 
+  - marker can barely understand your code
+
+  (2/10) Code is illegible
+  - if it cannot be understood
+
